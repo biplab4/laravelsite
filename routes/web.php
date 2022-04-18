@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\RoomController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Apanel\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Translation\MessageCatalogue;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('frontend.home');
 // });
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
@@ -26,4 +31,10 @@ Route::get('/service', [HomeController::class, 'service'])->name('service');
 
 
 //Apanel
-Route::get('/apanel', [DashboardController::class, 'index'])->name('apanel');
+Route::get('/apanel', [DashboardController::class, 'index'])->name('overview');
+
+
+
+Route::resource('/rooms', RoomController::class);
+Route::resource('/services', ServiceController::class);
+Route::resource('/messages', MessageController::class);

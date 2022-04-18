@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index(){
-        return view('apanel.app');
+        return view('admin.overview');
+    }
+
+    public function room(){
+        return view('rooms.index');
     }
 }

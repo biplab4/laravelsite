@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Room;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class RoomController extends Controller
@@ -16,7 +18,10 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+
+        $rooms = Room::all();
+        $count = $rooms->count();
+        return view('rooms.index',compact('rooms','count'));
     }
 
     /**
@@ -26,7 +31,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('rooms.add-room');
     }
 
     /**
@@ -40,16 +45,29 @@ class RoomController extends Controller
         $validated = $request->validate([
             'type' => 'required|unique:rooms',
             'description' => 'required',
-            'price' => 'required',
+            'charge' => 'required',
             'image' => 'required'
+
         ]);
-        
+
         $room = new Room();
         $room->type = $validated['type'];
         $room->description = $validated['description'];
-        $room->price = $validated['price'];
+        $room->charge = $validated['charge'];
         $room->slug = Str::slug($validated['type']);
         $room->save();
+
+        if (request('image')) {
+            $path = Storage::putFileAs(
+                'public/images',
+                $request->file('image'),
+                Carbon::now()->format('Y-m-d') . '-' . $request->file('image')->getClientOriginalName()
+            );
+
+            $room->images()->create(['path' => $path]);
+        }
+
+        return redirect()->route('rooms.index')->with('success', 'Room has been successfully created!');
     }
 
     /**
@@ -69,9 +87,11 @@ class RoomController extends Controller
      * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function edit(Room $room)
+    public function edit($id)
     {
-        //
+        $room = Room::findOrFail($id);
+        $img = $room->images->path;
+        return view('rooms.edit-room', compact('room','img'));
     }
 
     /**
@@ -81,9 +101,39 @@ class RoomController extends Controller
      * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Room $room)
+    public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'type' => 'required',
+            'description' => 'required',
+            'charge' => 'required',
+            'image' => 'required'
+
+        ]);
+
+        $room = Room::findOrFail($id);
+
+        if (request('image')) {
+
+            $path = Storage::putFileAs(
+                'public/images',
+                $request->file('image'),
+                Carbon::now()->format('Y-m-d') . '-' . $request->file('image')->getClientOriginalName()
+            );
+
+            $room->images()->updateOrCreate(
+                [
+                    'imageable_id' => $room->id,
+                    'imageable_type' => Room::class,
+                ],
+                ['path' => $path]
+            );
+        }
+        $room->type = $validated['type'];
+        $room->description = $validated['description'];
+        $room->charge = $validated['charge'];
+        $room->save();
+        return redirect()->route('rooms.index')->with('success','Room Details has been successfully updated!');
     }
 
     /**
@@ -92,8 +142,10 @@ class RoomController extends Controller
      * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Room $room)
+    public function destroy($id)
     {
-        //
+         Room::findOrFail($id)->delete();
+        
+        return redirect()->route('rooms.index')->with('success','Room has been successfully removed!');
     }
 }

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Service;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
-class ServiceController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('services.index');
+        $message = Message::all();
+        return view('message.index', compact('message'));
     }
 
     /**
@@ -25,7 +26,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+       //
     }
 
     /**
@@ -36,16 +37,27 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'message' => 'required',
+        ]);
+
+        $message = new Message();
+        $message->name = $validated['name'];
+        $message->email = $validated['email'];
+        $message->message = $validated['message'];
+        $message->save();
+        return back()->with('success','Your message has been sent! You will soon get a response');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show(Message $message)
     {
         //
     }
@@ -53,10 +65,10 @@ class ServiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit(Message $message)
     {
         //
     }
@@ -65,10 +77,10 @@ class ServiceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, Message $message)
     {
         //
     }
@@ -76,10 +88,10 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy(Message $message)
     {
         //
     }
