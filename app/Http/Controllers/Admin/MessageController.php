@@ -41,11 +41,13 @@ class MessageController extends Controller
             'name' => 'required',
             'email' => 'required',
             'message' => 'required',
+            'phone' => 'required|numeric'
         ]);
 
         $message = new Message();
         $message->name = $validated['name'];
         $message->email = $validated['email'];
+        $message->phone = $validated['phone'];
         $message->message = $validated['message'];
         $message->save();
         return back()->with('success','Your message has been sent! You will soon get a response');
@@ -91,8 +93,10 @@ class MessageController extends Controller
      * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Message $message)
+    public function destroy($id)
     {
-        //
+        Message::findOrFail($id)->delete();
+        
+        return redirect()->route('messages.index')->with('danger','Message has been successfully removed!');
     }
 }

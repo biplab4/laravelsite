@@ -28,16 +28,20 @@
                         <h3 class="m-2 p-3 text-warning font-weight-bold">Send us a message!</h3>
                         <div class="form-group col-md-6">
                             <label for="inputName">Name</label>
-                            <input type="text" name="name" class="form-control" id="inputName" placeholder="Your Name">
+                            <input type="text" name="name" class="form-control  @error('name') is-invalid @enderror" id="inputName" placeholder="Your Name">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Email</label>
-                            <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Your Email">
+                            <input type="email" name="email" class="form-control  @error('email') is-invalid @enderror" id="inputEmail4" placeholder="Your Email">
+                        </div>
+                        <div class="form-group pl-4">
+                            <label for="inputPhone">Phone number</label>
+                            <input type="phone" name="phone" class="form-control  @error('phone') is-invalid @enderror" id="inputPhone" placeholder="Your phone number">
                         </div>
 
                         <div class="form-group pl-4">
                             <label for="exampleFormControlTextarea1">Your Message</label>
-                            <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="4"></textarea>
+                            <textarea class="form-control  @error('message') is-invalid @enderror" name="message" id="exampleFormControlTextarea1" rows="4" placeholder="Your valuable message"></textarea>
                         </div>
                         <br>
                         <div class="g-recaptcha pl-4" data-sitekey="6LcPnmkfAAAAAK2sMJQzrQ-B9d0sT3HZgj236ePA"></div>

@@ -46,14 +46,19 @@ class RoomController extends Controller
             'type' => 'required|unique:rooms',
             'description' => 'required',
             'charge' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            
 
         ]);
+         $cat = $request->input('facility');
+         
+
 
         $room = new Room();
         $room->type = $validated['type'];
         $room->description = $validated['description'];
         $room->charge = $validated['charge'];
+        $room->facility = $cat;
         $room->slug = Str::slug($validated['type']);
         $room->save();
 
@@ -91,6 +96,8 @@ class RoomController extends Controller
     {
         $room = Room::findOrFail($id);
         $img = $room->images->path;
+        // dd($room->facility);
+        // $fac = $room->facility;
         return view('rooms.edit-room', compact('room','img'));
     }
 
@@ -107,10 +114,10 @@ class RoomController extends Controller
             'type' => 'required',
             'description' => 'required',
             'charge' => 'required',
-            'image' => 'required'
+            // 'image' => 'required'
 
         ]);
-
+        $facility = $request->input('facility');
         $room = Room::findOrFail($id);
 
         if (request('image')) {
@@ -132,6 +139,7 @@ class RoomController extends Controller
         $room->type = $validated['type'];
         $room->description = $validated['description'];
         $room->charge = $validated['charge'];
+        $room->facility = $facility;
         $room->save();
         return redirect()->route('rooms.index')->with('success','Room Details has been successfully updated!');
     }
@@ -146,6 +154,6 @@ class RoomController extends Controller
     {
          Room::findOrFail($id)->delete();
         
-        return redirect()->route('rooms.index')->with('success','Room has been successfully removed!');
+        return redirect()->route('rooms.index')->with('danger','Room has been successfully removed!');
     }
 }

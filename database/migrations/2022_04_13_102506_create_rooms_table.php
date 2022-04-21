@@ -18,8 +18,10 @@ class CreateRoomsTable extends Migration
             $table->string('type');
             $table->string('description');
             $table->string('slug')->unique();
+            $table->text('facility');
             $table->string('charge');
             $table->boolean('status')->default(1);
+            $table->string('created_by')->nullable();
             $table->softDeletes('deleted_at');
             $table->timestamps();
         });

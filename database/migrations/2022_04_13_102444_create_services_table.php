@@ -18,7 +18,9 @@ class CreateServicesTable extends Migration
             $table->string('type');
             $table->string('description');
             $table->string('slug')->unique();
-            $table->boolean('status')->default(0);
+            $table->boolean('status')->default(1);
+            $table->string('created_by')->nullable();
+            $table->softDeletes('deleted_at');
             $table->timestamps();
         });
     }

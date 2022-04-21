@@ -43,6 +43,17 @@
                     <label class="custom-file-label" for="customFile">Choose your image</label>
                 </div>
 
+                <div class="input-group">
+                    <label><strong>Select Facilities: </strong></label>
+                    <select class="form-control" name="facility[]" multiple="">
+                      <option value="shower">Shower Bathtub</option>
+                      <option value="king">King Bed</option>
+                      <option value="telephone">Telephone</option>
+                      <option value="wifi">Wi-Fi</option>
+                      <option value="ac">AC</option>
+                    </select>
+                </div>
+
                 <div class="form-group mb-3">
                     <label for="formGroupExampleInput">Room Charge</label>
                     <div class="input-group mb-3">
@@ -57,6 +68,7 @@
         </div>
     </div>
 </div>
+@endsection
 @push('page_scripts')
 <script>
 document.querySelector('.custom-file-input').addEventListener('change', function(e) {
@@ -65,4 +77,4 @@ document.querySelector('.custom-file-input').addEventListener('change', function
     nextSibling.innerText = fileName
 })
 </script>
-@endsection
+@endpush

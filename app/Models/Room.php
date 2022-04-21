@@ -10,16 +10,26 @@ class Room extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable =[
-        'type','description', 'charge'
+    protected $fillable = [
+        'type', 'description', 'charge', 'facility'
     ];
 
-protected $casts =[
-    'deleted_at'
-];
+    protected $casts = [
+        'deleted_at'
+    ];
+
+    public function setFacilityAttribute($value){
+        $this->attributes['facility'] = json_encode($value);
+    }
+
+    public function getFacilityAttribute($value){
+        return $this->attributes['facility'] = json_decode($value);
+    }
+
+
+
     public function images()
     {
         return $this->morphOne(Image::class, 'imageable');
     }
-
 }

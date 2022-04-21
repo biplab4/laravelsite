@@ -537,7 +537,9 @@
         </a>
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
-                <div class="sidebar-brand">
+                <div class="sidebar-brand"> <a class="navbar-brand" href="#">
+                    <img src="images/Logo Shambhu_2.jpg" width="55" height="55" class="img" alt="why">
+                </a>
                     <a href="#">Shrestha Residency</a>
                     <div id="close-sidebar">
                         <i class="fas fa-times"></i>
@@ -615,8 +617,7 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('services.create') }}">Add Service</a>
-                                    </li>
-                                   
+                                    </li>                                 
 
 
                                 </ul>
@@ -653,24 +654,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-book"></i>
-                                <span>Documentation</span>
-                                <span class="badge badge-pill badge-primary">Beta</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-folder"></i>
-                                <span>Examples</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
                 <!-- sidebar-menu  -->
             </div>
-            <!-- sidebar-content  -->
+         <!-- sidebar-content  -->
             <div class="sidebar-footer">
                 <a href="#">
                     <i class="fa fa-bell"></i>
@@ -688,6 +676,7 @@
                     <i class="fa fa-power-off"></i>
                 </a>
             </div>
+            
         </nav>
             </div>
             <div class="col-10">

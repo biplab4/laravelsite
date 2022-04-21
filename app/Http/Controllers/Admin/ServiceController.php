@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
@@ -15,7 +18,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('services.index');
+        $service = Service::all();
+        return view('services.index', compact('service'));
     }
 
     /**
@@ -25,7 +29,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('services.add-service');
     }
 
     /**
@@ -36,7 +40,30 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'type' => 'required',
+            'description' => 'required',
+            'image' => 'required'
+
+        ]);
+
+        $service = new Service();
+        $service->type = $validated['type'];
+        $service->description = $validated['description'];
+        $service->slug = Str::slug($validated['type']);
+        $service->save();
+
+        if (request('image')) {
+            $path = Storage::putFileAs(
+                'public/images',
+                $request->file('image'),
+                Carbon::now()->format('Y-m-d') . '-' . $request->file('image')->getClientOriginalName()
+            );
+
+            $service->images()->create(['path' => $path]);
+        }
+        return redirect()->route('services.index')->with('success', 'Service has been successfully created!');
+
     }
 
     /**
@@ -56,9 +83,13 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        // dd($service);
+        $img = $service->images->path;
+        return view('services.edit-service', compact('service' , 'img'));
+
     }
 
     /**
@@ -68,9 +99,38 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'type' => 'required',
+            'description' => 'required',
+            // 'image' => 'required'
+
+        ]);
+
+        $service = Service::findOrFail($id);
+        if (request('image')) {
+
+            $path = Storage::putFileAs(
+                'public/images',
+                $request->file('image'),
+                Carbon::now()->format('Y-m-d') . '-' . $request->file('image')->getClientOriginalName()
+            );
+
+            $service->images()->updateOrCreate(
+                [
+                    'imageable_id' => $service->id,
+                    'imageable_type' => Service::class,
+                ],
+                ['path' => $path]
+            );
+        }
+
+        $service->type = $validated['type'];
+        $service->description = $validated['description'];
+        $service->save();
+        return redirect()->route('services.index')->with('success', 'Service Details has been successfully updated');
+
     }
 
     /**
@@ -79,8 +139,10 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        //
+        Service::findOrFail($id)->delete();
+        
+        return redirect()->route('services.index')->with('danger','Service has been successfully removed!');
     }
 }

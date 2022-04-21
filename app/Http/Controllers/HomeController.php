@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Intervention\Image\Facades\Image;
+use App\Models\Image as ModelsImage;
+
 
 class HomeController extends Controller
 {
@@ -17,7 +17,9 @@ class HomeController extends Controller
     }
 
     public function gallery(){
-        return view('frontend.gallery');
+        $images = ModelsImage::all();
+        // dd($images);
+        return view('frontend.gallery', compact('images'));
     }
     
     public function room(){

@@ -10,6 +10,13 @@
         @endif
         </div>
         <div>
+            @if (session()->has('danger'))
+          
+            <p class="alert alert-danger text-center">{{ session()->get('danger') }}</p>
+          
+          @endif
+          </div>
+        <div>
             <h4 class="mt-4">Rooms</h4>
         </div>
         <div class="d-flex justify-content-between align-items-center mb-2">
@@ -17,7 +24,9 @@
                     class="text-primary"></span></p>
             <a class="btn btn-success" href="{{ route('rooms.create') }}">Add Room</a>
         </div>
+        <div class="table-responsive">
         <table class="table table-striped table-light">
+            <caption>List of Rooms</caption>
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -52,5 +61,6 @@
            
             </tbody>
           </table>
+        </div>
     </div>
 @endsection

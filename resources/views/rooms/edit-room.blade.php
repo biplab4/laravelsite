@@ -60,6 +60,23 @@
                 </label>
             </div>
 
+           
+                <p class="text-success"> Selected Facilities: </p>
+                    @foreach ($room->facility as $item)
+                        <p class="text-muted"> {{ $item }}</p>
+                    @endforeach                 
+               <br>
+               <div class="input-group">
+                <label><strong>Select more/less Facilities :</strong></label>
+                <select class="form-control" name="facility[]" multiple="">
+                  <option value="shower">Shower Bathtub</option>
+                  <option value="king">King Bed</option>
+                  <option value="telephone">Telephone</option>
+                  <option value="wifi">Wi-Fi</option>
+                  <option value="ac">AC</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label for="formGroupExampleInput">Edit Room Charge</label>
                 <div class="input-group mb-3">
