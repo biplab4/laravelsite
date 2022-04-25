@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Image as ModelsImage;
+use App\Models\Gallery;
+use App\Models\Image;
 
 
 class HomeController extends Controller
@@ -17,9 +18,9 @@ class HomeController extends Controller
     }
 
     public function gallery(){
-        $images = ModelsImage::all();
+        $gallery = Gallery::with('images')->get();
         // dd($images);
-        return view('frontend.gallery', compact('images'));
+        return view('frontend.gallery', compact('gallery'));
     }
     
     public function room(){

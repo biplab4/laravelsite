@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\RoomController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -30,11 +32,13 @@ Route::get('/room', [HomeController::class, 'room'])->name('room');
 Route::get('/service', [HomeController::class, 'service'])->name('service');
 
 
+
+Route::prefix('apanel')->group(function(){
 //Apanel
-Route::get('/apanel', [DashboardController::class, 'index'])->name('overview');
-
-
-
+Route::get('/overview', [DashboardController::class, 'index'])->name('overview');
 Route::resource('/rooms', RoomController::class);
 Route::resource('/services', ServiceController::class);
 Route::resource('/messages', MessageController::class);
+Route::resource('/banners', BannerController::class);
+Route::resource('/gallery',GalleryController::class);
+});

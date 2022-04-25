@@ -21,6 +21,9 @@
 
 </head>
 <style>
+  
+
+/* For Admin Panel */
     @keyframes swing {
         0% {
             transform: rotate(0deg);
@@ -624,7 +627,7 @@
                             </div>
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="#">
+                            <a href="{{ route('gallery.index') }}">
                                 <i class="fa fa-chart-line"></i>
                                 <span>Gallery</span>
                             </a>
@@ -641,16 +644,17 @@
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fa fa-globe"></i>
-                                <span>Maps</span>
+                                <span>Banner</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Google maps</a>
+                                        <a href="{{ route('banners.index') }}">All Banners</a>
                                     </li>
                                     <li>
-                                        <a href="#">Open street map</a>
+                                        <a href="{{ route('banners.create') }}">Add Banners</a>
                                     </li>
+                                   
                                 </ul>
                             </div>
                         </li>

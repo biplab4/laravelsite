@@ -9,10 +9,10 @@
     <hr class="mt-2 mb-5">
   
     <div class="row text-center text-lg-start">
-  @foreach ($images as $image)
+  @foreach ($gallery as $image)
   <div class="col-lg-3 col-md-4 col-6">
     <a href="#" class="d-block mb-4 h-100">
-      <img src="{{ isset($image->path) ? Storage::url($image->path) : "https://picsum.photos/400" }}"
+      <img src="{{ isset($image->images->path) ? Storage::url($image->images->path) : "https://picsum.photos/400" }}"
                     alt="Not In Database" class="mt-2" width="100%">
     </a>
   </div>
