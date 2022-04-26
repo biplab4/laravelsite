@@ -8,7 +8,7 @@
         <div class="col-md-4">
             <div class="thumbnail">
                 <a href="" style="text-decoration: none">
-                    <img src="images/b1.png" alt="Lights" style="width:100%">
+                    <img src="images/fourth.jpg" alt="restro" style="width:100%">
                     <div class="caption">
                         <h4 class="text-primary font-weight-bold">Multi-Cuisine Restaurant</h4>
                         <button type="submit" class="btn btn-success">Read more</button>
@@ -19,7 +19,7 @@
         <div class="col-md-4">
             <div class="thumbnail">
                 <a href="" style="text-decoration: none">
-                    <img src="images/drinking.jpg" alt="Nature" style="width:100%">
+                    <img src="images/sixth.jpg" alt="bar" style="width:100%">
                     <div class="caption">
                         <h4 class="text-primary font-weight-bold">Super Standard Bar</h4>
                         <button type="submit" class="btn btn-success">Read more</button>
@@ -30,7 +30,7 @@
         <div class="col-md-4">
             <div class="thumbnail">
                 <a href="" style="text-decoration: none">
-                    <img src="images/b1.png" alt="Fjords" style="width:100%">
+                    <img src="images/fifth.jpg" alt="halls" style="width:100%">
                     <div class="caption">
                         <h4 class="text-primary font-weight-bold">Well Equipped Banquet Halls</h4>
                         <button type="submit" class="btn btn-success">Read more</button>

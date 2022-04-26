@@ -23,30 +23,34 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        
-        <hr>
-    </div>
-    <div class="container">
-        <div>
-            <h1 class="text-center text-primary font-weight-bold" style="font-family: cursive">Welcome to Shrestha Residency
-            </h1>
-            <p class="text-center text-muted">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus <br>
-                aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam <br>
-                debitis?
-            </p>
-        </div>
 
+        <hr style="margin: 0px ">
     </div>
-    <hr>
-    <div class="">
+    <div style="background-image: url('images/texture.jpg')" class="py-5">
+        <h1 class="text-center text-primary font-weight-bold" style="font-family: cursive ">Welcome to Hotel Shrestha
+            Residency
+        </h1>
+        <p class="text-center py-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque ssaepe id volsuptatibusjj<br>
+            aliquid iusto consequuntur,ajdssss doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam<br>
+            debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptat<br>
+            ibus aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iusre fuga. Voluptatibus, veniam <br>
+            debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptat<br>
+            busaliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Volupttibus, veniamdebit<br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque ssaepe id volsuptatibusjj<br>
+            busaliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Volupttibus, veniamdebit<br>
+        </p>
+        
+    </div>
+    <hr style="margin: 0px ">
+    <div class="container">
         <h2 class="text-center text-warning font-weight-bold" style="font-family: cursive">Our Services</h2><br>
         <div class="row">
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail shadow-lg">
                     <a href="" style="text-decoration: none">
                         <img src="images/b1.png" alt="Lights" style="width:100%">
-                        <div class="caption">
+                        <div class="caption ">
                             <h4 class="text-primary font-weight-bold">Multi-Cuisine Restaurant</h4>
                             <button type="submit" class="btn btn-success">Read more</button>
                         </div>
@@ -54,9 +58,9 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail shadow-lg">
                     <a href="" style="text-decoration: none">
-                        <img src="images/drinking.jpg" alt="Nature" style="width:100%">
+                        <img src="images/b2.png" alt="Nature" style="width:100%">
                         <div class="caption">
                             <h4 class="text-primary font-weight-bold">Super Standard Bar</h4>
                             <button type="submit" class="btn btn-success">Read more</button>
@@ -65,7 +69,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail shadow-lg">
                     <a href="" style="text-decoration: none">
                         <img src="images/b1.png" alt="Fjords" style="width:100%">
                         <div class="caption">
@@ -80,18 +84,19 @@
     <hr>
     <div class="container">
         <div class="row">
-            <div class="col-7">
-                <img src="images/fifth.jpg" alt="" class="w-100">
-            </div>
-            <div class="col-5">
-                <h2 class="font-weight-bold text-center text-danger" style="font-family: cursive">OUR HIGHLIGHTS</h2>
-                <span class="text-muted text-center">
+            <div class="col-6">
+                <h2 class="font-weight-bold text-auto text-danger" style="font-family: cursive">OUR HIGHLIGHTS</h2>
+                <span class="text-muted text-justify">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
                     <br>
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
                     <br>
                     debitis?
                 </span>
+
+            </div>
+            <div class="col-6">
+                <img src="images/fifth.jpg" alt="" class="w-100 shadow-lg">
             </div>
         </div>
     </div>
@@ -146,25 +151,27 @@
             </div>
         </div>
     </div> --}}
-    
-        
+    <br>
+
     <div class="container">
-        
         <div class="row">
-           
-            <div class="col-7">
-                <img src="images/room.jpg" alt="" class="w-100">
+
+            <div class="col-6">
+                <img src="images/room.jpg" alt="" class="w-100 shadow-lg">
             </div>
-            <div class="col-5">
-                <h2 class="font-weight-bold text-center text-success" style="font-family: cursive">OUR ROOMS</h2>
-                <span class="text-muted text-center">
+            <div class="col-6">
+                <h2 class="font-weight-bold text-left text-success" style="font-family: cursive">OUR ROOMS</h2>
+                <span class="text-muted text-right">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
                     <br>
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
                     <br>
                     debitis?
-                </span><br>
-                <button type="submit" class="btn btn-primary"> <a href="{{ route('room') }}" style="text-decoration: none" class="text-light">Read more</a> </button>
+                </span>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary"> <a href="{{ route('room') }}" style="text-decoration: none"
+                        class="text-light">Read more</a> </button>
             </div>
         </div>
         <br>

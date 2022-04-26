@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="container">
+{{-- <div class="container">
     <h2 class="text-primary font-weight-bold text-center" style="font-family: cursive">Our Rooms</h2>
     <div class="card-group">
 
@@ -66,7 +66,69 @@
     </div>
 
 </div>
-<br><br>
+<br><br> --}}
+ <div class="container">
+        <h2 class="text-danger font-weight-bolder text-uppercase text-center" style="font-family: cursive">Our Rooms</h2>
+        <div class="row">
+            <div class="col">
+                <div class="thumbnail">
+                    <a href="{{ route('standard') }}" style="text-decoration: none">
+                        <img src="images/b1.png" alt="Lights" style="width:100%" class="img-thumbnail">
+                        <div class="caption">
+                            <h4 class="text-primary font-weight-bold">Standard Room</h4>
+                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Book a room</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="thumbnail">
+                    <a href="" style="text-decoration: none">
+                        <img src="images/b1.png" alt="Lights" style="width:100%"class="img-thumbnail">
+                        <div class="caption">
+                            <h4 class="text-primary font-weight-bold"> Deluxe Room</h4>
+                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Book a room</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col">
+                <div class="thumbnail">
+                    <a href="" style="text-decoration: none">
+                        <img src="images/b2.png" alt="Lights" style="width:100%" class="img-thumbnail">
+                        <div class="caption">
+                            <h4 class="text-primary font-weight-bold">Super Deluxe Room</h4>
+                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Book a room</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="thumbnail">
+                    <a href="" style="text-decoration: none">
+                        <img src="images/b2.png" alt="Lights" style="width:100%" class="img-thumbnail">
+                        <div class="caption">
+                            <h4 class="text-primary font-weight-bold">Sweet Room</h4>
+                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success">Book a room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
 

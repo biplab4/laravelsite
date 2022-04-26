@@ -1,7 +1,4 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -554,8 +551,8 @@
             alt="User picture"> --}}
                     </div>
                     <div class="user-info">
-                        <span class="user-name">John
-                            <strong>Doe</strong>
+                        <span class="user-name">admin
+                            <strong>admin</strong>
                         </span>
                         <span class="user-role">Administrator</span>
                         <span class="user-status">

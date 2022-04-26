@@ -25,11 +25,16 @@ use Symfony\Component\Translation\MessageCatalogue;
 //     return view('frontend.home');
 // });
 
-Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/room', [HomeController::class, 'room'])->name('room');
-Route::get('/service', [HomeController::class, 'service'])->name('service');
+
+    Route::get('/', [HomeController::class, 'home'])->name('home');
+    Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+    Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+    Route::get('/room', [HomeController::class, 'room'])->name('room');
+    Route::get('/service', [HomeController::class, 'service'])->name('service');
+    
+
+
+
 
 
 
@@ -42,3 +47,8 @@ Route::resource('/messages', MessageController::class);
 Route::resource('/banners', BannerController::class);
 Route::resource('/gallery',GalleryController::class);
 });
+
+
+//checking dynamic dropdowns
+Route::get('/check',[HomeController::class, 'layout']);
+Route::get('/standard-room',[HomeController::class, 'standard'])->name('standard');
