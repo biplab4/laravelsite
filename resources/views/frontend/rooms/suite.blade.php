@@ -2,12 +2,23 @@
 
 @section('content')
     <div class="container">
-        <h2 class="text-danger font-weight-bolder text-monospace text-center">STANDARD ROOMS</h2>
+        <h2 class="text-danger font-weight-bolder text-monospace text-center">SUITE ROOMS</h2>
         <hr>
         <div class="row">
-            <div class="col">
-
-            </div>
+           
+                <div class="col-xl-4 col-lg-6 mb-4">
+                    <div class="card" style="background-image: url('../images/texture.jpg')">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                   <div class="ms-3">
+                                    <p class="fw-bold mb-1">Starting at $50 Per Night</p>
+                                    {{-- <p class="text-muted mb-0">Free WiFi</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
             <div class="col text-right">
 
 
@@ -16,12 +27,8 @@
             </div>
             <div class="col">
                 <p>
-                    Our standard rooms have enough space to relax and enjoy. The rooms are interlocking with all of the
-                    amenities in place.  The rooms are rigged with a working desk, and a coffee/tea maker. The spacious
-                    rooms deliver tranquility and elegance and make you feel like home. Equipped with modern day amenities,
-                    the room ensures a comfortable stay.  The rooms are rigged with a working desk, and a coffee/tea maker. The spacious
-                    rooms deliver tranquility and elegance and make you feel like home. Equipped with modern day amenities,
-                    the room ensures a comfortable stay. Adorned in the elegant interiors all these rooms are well-furnished and floors are
+                    Our suite rooms have enough space to relax and enjoy. The rooms are interlocking with all of the
+                    amenities in place. Adorned in the elegant interiors all these rooms are well-furnished and floors are
                     done with wooden parquet. The rooms are rigged with a working desk, and a coffee/tea maker. The spacious
                     rooms deliver tranquility and elegance and make you feel like home. Equipped with modern day amenities,
                     the room ensures a comfortable stay.
@@ -30,9 +37,7 @@
                 <h4 class="font-weight-bold text-monospace">Cozy and Comfortable Stay</h4>
                 <span class=" font-weight-bolder">Starting at $50 Per Night</span>
                 <hr> --}}
-                
                 <button class="btn btn-success">Book Room</button>
-                <button class="btn btn-info align-right">Request Quotation</button>
 
             </div>
             <div class="col">
@@ -43,8 +48,8 @@
             </div>
         </div>
         <hr>
-        <h3 class="text-center font-weight-bolder text-primary">Deluxe Facilities</h3>
-  <hr>
+        <h3 class="text-center font-weight-bolder text-primary">Suite Facilities</h3>
+
         <div class="row">
 
             <div class="col-xl-4 col-lg-6 mb-4">
@@ -66,7 +71,7 @@
                         <div class="d-flex align-items-center">
                             <img src="../images/tv.png" alt="" style=" height: 40px" class="rounded-circle" />
                             <div class="ms-3">
-                                <p class="fw-bold mb-1"> Television</p>
+                                <p class="fw-bold mb-1">Television</p>
                                 <p class="text-muted mb-0">LED TV</p>
                             </div>
                         </div>
@@ -229,46 +234,47 @@
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
                                             <a href="{{ route('deluxe') }}" style="text-decoration: none">
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
-                                            <div class="card-body">
-                                                <h4 class="card-title text-danger font-weight-bold">Deluxe Rooms</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing
-                                                    elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
-                                                </p>
+                                                <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title text-danger font-weight-bold">Deluxe Rooms</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing
+                                                        elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
+                                                    </p>
+    
+                                                </div>
+                                            </a>
 
-                                            </div>
-                                        </a>
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
                                             <a href="{{ route('superdeluxe') }}" style="text-decoration: none">
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
-                                            <div class="card-body">
-                                                <h4 class="card-title text-danger font-weight-bold">Super Deluxe Rooms</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing
-                                                    elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
-                                                </p>
-
-                                            </div>
-                                        </a>
+                                                <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title text-danger font-weight-bold">Super Deluxe Rooms</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing
+                                                        elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
+                                                    </p>
+    
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
-                                            <a href="{{ route('suite') }}" style="text-decoration: none">
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
-                                            <div class="card-body">
-                                                <h4 class="card-title text-danger font-weight-bold">Suite Rooms</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing
-                                                    elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
-                                                </p>
-
-                                            </div>
-                                        </a>
+                                            <a href="{{ route('standard') }}" style="text-decoration: none">
+                                                <img class="img-fluid" alt="100%x280" src="../images/sixth.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title text-danger font-weight-bold">Standard Rooms</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing
+                                                        elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
+                                                        .</p>
+    
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
 
@@ -280,9 +286,9 @@
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
                                             <a href="{{ route('service') }}" style="text-decoration: none">
-                                                <img class="img-fluid" alt="100%x280" src="../images/b1.png">
+                                                <img class="img-fluid" alt="100%x280" src="../images/restro.jpg">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-primary font-weight-bold">Well Equipped Halls</h4> </a>
+                                                    <h4 class="card-title text-primary font-weight-bold">Multi-Cuisine Restaurant</h4> </a>
                                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur
                                                         adipisicing
                                                         elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
@@ -296,16 +302,16 @@
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
                                             <a href="{{ route('service') }}" style="text-decoration: none">
-                                                <img class="img-fluid" alt="100%x280" src="../images/b1.png">
+                                                <img class="img-fluid" alt="100%x280" src="../images/fifth.jpg">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-primary font-weight-bold">Multi-Cuisine Restaurant</h4>  </a>
+                                                    <h4 class="card-title text-primary font-weight-bold">Swimming Pool</h4>   </a>
                                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur
                                                         adipisicing
                                                         elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
                                                     </p>
     
                                                 </div>
-                                          
+                                         
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
@@ -313,14 +319,14 @@
                                             <a href="{{ route('service') }}" style="text-decoration: none">
                                                 <img class="img-fluid" alt="100%x280" src="../images/b1.png">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-primary font-weight-bold">Swimming Pool</h4>    </a>
+                                                    <h4 class="card-title text-primary font-weight-bold">Well Equipped Halls</h4>   </a>
                                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur
                                                         adipisicing
                                                         elit. Quasi laboriosam qui asperiores quia necessitatibus ullam laborum!
                                                     </p>
     
                                                 </div>
-                                        
+                                         
                                         </div>
                                     </div>
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="">
+    <div class="container-fluid pt-2">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox" style="max-width:1920px; max-height:650px !important;">
                 <div class="carousel-item active">
@@ -24,34 +24,34 @@
             </a>
         </div>
 
-        <hr style="margin: 0px ">
+       
     </div>
-    <div style="background-image: url('images/texture.jpg')" class="py-5">
-        <h1 class="text-center text-primary font-weight-bold" style="font-family: cursive ">Welcome to Hotel Shrestha
-            Residency
-        </h1>
-        <p class="text-center py-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque ssaepe id volsuptatibusjj<br>
-            aliquid iusto consequuntur,ajdssss doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam<br>
-            debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptat<br>
-            ibus aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iusre fuga. Voluptatibus, veniam <br>
-            debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptat<br>
-            busaliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Volupttibus, veniamdebit<br>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque ssaepe id volsuptatibusjj<br>
-            busaliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Volupttibus, veniamdebit<br>
-        </p>
-        
+<hr>
+    <div style="background-image: url('images/texture.jpg')" class="py-4">
+        <div class="container">
+            <h1 class="text-center text-primary font-weight-bold">Welcome to Hotel Shrestha Residency</h1>
+            <p class=" pt-5 pb-5">
+                Lorem , dolor sit amet consectetur adipisicing elit. Corporis sed quia neque ssaepe id
+                volsuptatibusjjaliquid iusto consequuntur
+                ipsum, dolor sit amet consectetur adipisicing elit ipsum, dolor sit amet consectetur adipisicing elit.
+                Corporis sed quia neque ssaepe id volsuptatibusjjaliquid iusto consequuntur
+                Lorem , dolor sit amet consectetur adipisicing elit Lorem , dolor sit amet consectetur adipisicing elit.
+                Corporis sed quia neque ssaepe id volsuptatibusjjaliquid iusto consequuntur
+                ipsum, dolor sit amet consectetur adipisicing elit Lorem , dolor sit amet consectetur adipisicing elit.
+                Corporis sed quia neque ssaepe id volsuptatibusjjaliquid iusto consequuntur
+                ipsum, dolor sit amet consectetur adipisicing elit </p>
+        </div>
     </div>
     <hr style="margin: 0px ">
     <div class="container">
-        <h2 class="text-center text-warning font-weight-bold" style="font-family: cursive">Our Services</h2><br>
+        <h2 class="text-center text-warning text-uppercase font-weight-bold text-monospace pt-4" >Our Services</h2><br>
         <div class="row">
             <div class="col-md-4">
                 <div class="thumbnail shadow-lg">
                     <a href="" style="text-decoration: none">
                         <img src="images/b1.png" alt="Lights" style="width:100%">
                         <div class="caption ">
-                            <h4 class="text-primary font-weight-bold">Multi-Cuisine Restaurant</h4>
+                            <h4 class="text-primary font-weight-bold">Multi-cuisine Restaurant</h4>
                             <button type="submit" class="btn btn-success">Read more</button>
                         </div>
                     </a>
@@ -85,88 +85,99 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <h2 class="font-weight-bold text-auto text-danger" style="font-family: cursive">OUR HIGHLIGHTS</h2>
+                <h2 class="font-weight-bold text-auto text-danger" >OUR HIGHLIGHTS</h2>
                 <span class="text-muted text-justify">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
                     <br>
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
                     <br>
-                    debitis?
+                    debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
+                    <br>
+                    aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
+                    <br>
                 </span>
+                <br>
+                <a href="{{ route('service') }}"
+                        style="text-decoration: none" class="text-light">
+                <button type="submit" class="btn btn-warning "> Read More </button></a>
 
             </div>
             <div class="col-6">
-                <img src="images/fifth.jpg" alt="" class="w-100 shadow-lg">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="../images/fifth.jpg" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../images/hall.jpg" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../images/restro.jpg" alt="Third slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
             </div>
         </div>
     </div>
     <hr>
-    {{-- <div class="container">
-        <h2 class="text-primary font-weight-bold text-center">Our Rooms</h2>
-        <div class="row">
-            <div class="col">
-                <div class="thumbnail">
-                    <a href="" style="text-decoration: none">
-                        <img src="images/b1.png" alt="Lights" style="width:100%" class="img-thumbnail">
-                        <div class="caption">
-                            <h4 class="text-warning font-weight-bold">Standard Room</h4>
-                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="thumbnail">
-                    <a href="" style="text-decoration: none">
-                        <img src="images/b1.png" alt="Lights" style="width:100%"class="img-thumbnail">
-                        <div class="caption">
-                            <h4 class="text-warning font-weight-bold"> Deluxe Room</h4>
-                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col">
-                <div class="thumbnail">
-                    <a href="" style="text-decoration: none">
-                        <img src="images/third.jpg" alt="Lights" style="width:100%" class="img-thumbnail">
-                        <div class="caption">
-                            <h4 class="text-warning font-weight-bold">Super Deluxe Room</h4>
-                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="thumbnail">
-                    <a href="" style="text-decoration: none">
-                        <img src="images/room.jpg" alt="Lights" style="width:100%" class="img-thumbnail">
-                        <div class="caption">
-                            <h4 class="text-warning font-weight-bold">Sweet Room</h4>
-                            <span class="text-muted">Lorem ipsum lorem lorem.</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <br>
 
     <div class="container">
         <div class="row">
 
             <div class="col-6">
-                <img src="images/room.jpg" alt="" class="w-100 shadow-lg">
+                {{-- <img src="images/room.jpg" alt="" class="w-100 shadow-lg"> --}}
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="../images/room.jpg" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../images/fourth.jpg" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../images/room.jpg" alt="Third slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
             </div>
             <div class="col-6">
-                <h2 class="font-weight-bold text-left text-success" style="font-family: cursive">OUR ROOMS</h2>
+                <h2 class="font-weight-bold text-left text-success" >OUR ROOMS</h2>
                 <span class="text-muted text-right">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
                     <br>
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
                     <br>
-                    debitis?
+                    debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
+                    <br>
+                    aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
+                    <br>
                 </span>
                 <br>
                 <br>

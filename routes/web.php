@@ -49,6 +49,12 @@ Route::resource('/gallery',GalleryController::class);
 });
 
 
-//checking dynamic dropdowns
+
+
+Route::prefix('/room')->group(function(){
+    Route::get('/standard-room',[HomeController::class, 'standard'])->name('standard');
+    Route::get('/super-deluxe',[HomeController::class, 'superdeluxe'])->name('superdeluxe');
+    Route::get('/deluxe',[HomeController::class, 'deluxe'])->name('deluxe');
+    Route::get('/suite',[HomeController::class, 'suite'])->name('suite');
+});
 Route::get('/check',[HomeController::class, 'layout']);
-Route::get('/standard-room',[HomeController::class, 'standard'])->name('standard');

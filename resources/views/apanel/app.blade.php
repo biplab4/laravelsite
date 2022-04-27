@@ -10,7 +10,7 @@
     <meta name="description"
         content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
     <title>Admin Panel </title>
-    <link rel="icon" href="{!! asset('images/Logo Shambhu_2.jpg') !!}">
+    <link rel="icon" href="{!! asset('../images/logo.jpg') !!}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -538,7 +538,7 @@
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-brand"> <a class="navbar-brand" href="#">
-                    <img src="images/Logo Shambhu_2.jpg" width="55" height="55" class="img" alt="why">
+                    <img src="../images/logo.jpg" width="55" height="55" class="img" alt="why">
                 </a>
                     <a href="#">Shrestha Residency</a>
                     <div id="close-sidebar">

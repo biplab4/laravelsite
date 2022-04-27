@@ -4,7 +4,7 @@
 <!-- Page Content -->
 <div class="container">
 
-    <h1 class="fw-light text-center font-weight-bolder text-warning text-lg-start mt-4 mb-0">Our Gallery</h1>
+    <h2 class="fw-light text-center font-weight-bolder text-warning text-lg-start mt-4 mb-0">Our Gallery</h2>
   
     <hr class="mt-2 mb-5">
   

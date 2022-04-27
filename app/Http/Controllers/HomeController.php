@@ -52,4 +52,13 @@ class HomeController extends Controller
     public function standard(){
         return view('frontend.rooms.standard-room');
     }
+    public function deluxe(){
+        return view('frontend.rooms.deluxe');
+    }
+    public function superdeluxe(){
+        return view('frontend.rooms.super-deluxe');
+    }
+    public function suite(){
+        return view('frontend.rooms.suite');
+    }
 }

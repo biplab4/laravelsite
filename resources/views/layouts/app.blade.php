@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Hotel Shrestha Residency</title>
-    <link rel="icon" href="{!! asset('images/Logo Shambhu_2.jpg') !!}">
+    <link rel="icon" href="{!! asset('../images/logo.jpg') !!}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -29,22 +30,27 @@
         height: 100%;
         opacity: 0.8;
     }
+    .ms-3 {
+        margin-left: 2em;
+    }
+   
 
 </style>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">
-            <img src="images/logo.jpg" width="60" height="60" class="d-inline-block align-top" style="position: absolute"
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="../images/logo.jpg" width="60" height="60" class="d-inline-block align-top" style="position: absolute"
                 alt="">
         </a>
         <div class="container">
             <ul class="nav navbar-nav">
                 <li class="active font-weight-bold  "><a href="{{ route('home') }}"> HOME</a></li>
                 <li class="font-weight-bold "><a href="{{ route('room') }}"> OUR ROOMS</a></li>
-                <li class="font-weight-bold "><a href="{{ route('contact') }}"> CONTACT US</a></li>
                 <li class="font-weight-bold "><a href="{{ route('gallery') }}"> GALLERY</a></li>
-                <li class="dropdown font-weight-bold">
+                <li class="font-weight-bold "><a href="{{ route('service') }}">ABOUT US</a></li>
+                <li class="font-weight-bold "><a href="{{ route('contact') }}"> CONTACT US</a></li>
+                {{-- <li class="dropdown font-weight-bold">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                         SERVICES
                         <ul class="dropdown-menu">
@@ -53,9 +59,11 @@
                             <li><a href="{{ route('service') }}">Banquet Halls</a></li>
                             <li><a href="{{ route('service') }}">Roof Top Pool</a></li>
                         </ul>
-                </li>
-            </ul>
-            </a>
+                    </a>
+                </li> --}}
+           
+           
+        </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><button type="submit" class="btn btn-success"> Book </button></li>
 
@@ -69,7 +77,7 @@
 
 
     <!-- Footer -->
-    <footer class="fixed page-footer" style="background-image: url('images/texture.jpg'); padding-top: 20px;">
+    <footer class="fixed page-footer" style="background-image: url('../images/texture.jpg'); padding-top: 20px;">
 
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
@@ -84,7 +92,7 @@
                     {{-- <h5 class="text-uppercase font-weight-bold">Hotel Shrestha Residency</h5>
                     <p class="text-muted">जीतपुर सिमरा उपमहानगरपालिका -२,वारा,२,</p> --}}
                     <a class="navbar-brand" href="#">
-                        <img src="images/logo.jpg" width="85" height="85" class="img" alt=""
+                        <img src="../images/logo.jpg" width="85" height="85" class="img" alt=""
                             style="position: absolute">
                     </a>
 
@@ -131,7 +139,7 @@
                                     class="bi bi-telephone-forward-fill" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
                                         d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.761.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
-                                </svg> 9824384728</a>
+                                </svg> 984-5285081</a>
                         </li>
                     </ul>
 
@@ -147,17 +155,17 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" style="text-decoration: none" class="text-dark">Rooms</a>
+                            <a href="{{ route('room') }}" style="text-decoration: none" class="text-dark">Rooms</a>
                         </li>
                         <li>
-                            <a href="#!" style="text-decoration: none" class="text-dark">Swimming Pools</a>
+                            <a href="{{ route('gallery') }}" style="text-decoration: none" class="text-dark">Our Gallery</a>
                         </li>
                         <li>
-                            <a href="#!" style="text-decoration: none" class="text-dark">Well Equipped Banquet
+                            <a href="{{ route('service') }}" style="text-decoration: none" class="text-dark">Well Equipped Banquet
                                 Halls</a>
                         </li>
                         <li>
-                            <a href="#!" style="text-decoration: none" class="text-dark">Contact us</a>
+                            <a href="{{ route('contact') }}" style="text-decoration: none" class="text-dark">Contact us</a>
                         </li>
                     </ul>
 
