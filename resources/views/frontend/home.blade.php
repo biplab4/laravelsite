@@ -24,10 +24,9 @@
             </a>
         </div>
 
-       
+
     </div>
-<hr>
-    <div style="background-image: url('images/texture.jpg')" class="py-4">
+    <div style="background-image: url('images/texture.jpg')" class="py-5">
         <div class="container">
             <h1 class="text-center text-primary font-weight-bold">Welcome to Hotel Shrestha Residency</h1>
             <p class=" pt-5 pb-5">
@@ -44,11 +43,11 @@
     </div>
     <hr style="margin: 0px ">
     <div class="container">
-        <h2 class="text-center text-warning text-uppercase font-weight-bold text-monospace pt-4" >Our Services</h2><br>
+        <h1 class="text-center text-warning text-uppercase font-weight-bold text-monospace pt-4">Our Services</h1><br>
         <div class="row">
             <div class="col-md-4">
                 <div class="thumbnail shadow-lg">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('service') }}" style="text-decoration: none">
                         <img src="images/b1.png" alt="Lights" style="width:100%">
                         <div class="caption ">
                             <h4 class="text-primary font-weight-bold">Multi-cuisine Restaurant</h4>
@@ -59,7 +58,7 @@
             </div>
             <div class="col-md-4">
                 <div class="thumbnail shadow-lg">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('service') }}" style="text-decoration: none">
                         <img src="images/b2.png" alt="Nature" style="width:100%">
                         <div class="caption">
                             <h4 class="text-primary font-weight-bold">Super Standard Bar</h4>
@@ -70,7 +69,7 @@
             </div>
             <div class="col-md-4">
                 <div class="thumbnail shadow-lg">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('service') }}" style="text-decoration: none">
                         <img src="images/b1.png" alt="Fjords" style="width:100%">
                         <div class="caption">
                             <h4 class="text-primary font-weight-bold">Well Equipped Banquet Halls</h4>
@@ -84,51 +83,52 @@
     <hr>
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <h2 class="font-weight-bold text-auto text-danger" >OUR HIGHLIGHTS</h2>
-                <span class="text-muted text-justify">
+            <div class="col-6 ">
+                <h2 class="font-weight-bold text-auto text-danger pb-4">OUR HIGHLIGHTS</h2>
+                <span class="text-center">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
-                    debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis saepe praesentium eligendi illum
+                    earum magni minus! Excepturi earum repudiandae, autem, dolor, debitis mollitia accusantium itaque
+                    aspernatur voluptates expedita iste.repudiandae, autem, dolor, debitis mollitia accusantium itaque
+                    aspernatur voluptates expedita iste.
+
                 </span>
                 <br>
-                <a href="{{ route('service') }}"
-                        style="text-decoration: none" class="text-light">
-                <button type="submit" class="btn btn-warning "> Read More </button></a>
+                <br>
+                <br>
+                <a href="{{ route('service') }}" style="text-decoration: none" class="text-light">
+                    <button type="submit" class="btn btn-warning "> Read More </button></a>
 
             </div>
             <div class="col-6">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="../images/fifth.jpg" alt="First slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/hall.jpg" alt="Second slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/restro.jpg" alt="Third slide">
-                      </div>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="../images/fifth.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="../images/hall.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="../images/restro.jpg" alt="Third slide">
+                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                     </a>
-                  </div>
+                </div>
             </div>
         </div>
     </div>
@@ -142,49 +142,52 @@
                 {{-- <img src="images/room.jpg" alt="" class="w-100 shadow-lg"> --}}
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="../images/room.jpg" alt="First slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/fourth.jpg" alt="Second slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/room.jpg" alt="Third slide">
-                      </div>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="../images/room.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="../images/fourth.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="../images/room.jpg" alt="Third slide">
+                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                     </a>
-                  </div>
+                </div>
             </div>
             <div class="col-6">
-                <h2 class="font-weight-bold text-left text-success" >OUR ROOMS</h2>
-                <span class="text-muted text-right">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
-                    aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
-                    debitis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
-                    aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
-                </span>
+                <h2 class="font-weight-bold text-left text-success pb-4">OUR ROOMS</h2>
+                <span class="text-center">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
+                  aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
+                  aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis saepe praesentium eligendi illum
+                  earum magni minus! Excepturi earum repudiandae, autem, dolor, debitis mollitia accusantium itaque
+                  aspernatur voluptates expedita iste.repudiandae, autem, dolor, debitis mollitia accusantium itaque
+                  aspernatur voluptates expedita iste.
+
+              </span>
+              <br>               
                 <br>
                 <br>
                 <button type="submit" class="btn btn-primary"> <a href="{{ route('room') }}" style="text-decoration: none"
                         class="text-light">Read more</a> </button>
             </div>
         </div>
+        <br>
+        <br>
         <br>
     </div>
 

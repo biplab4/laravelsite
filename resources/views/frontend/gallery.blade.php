@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
-
+<div class="container pt-4 pb-4" style="background-image: url('../images/texture.jpg')">
+  <h2 class="text-center text-warning font-weight-bolder">OUR GALLERY </h2>
+</div>
+<br>
 <!-- Page Content -->
 <div class="container">
 
-    <h2 class="fw-light text-center font-weight-bolder text-warning text-lg-start mt-4 mb-0">Our Gallery</h2>
-  
-    <hr class="mt-2 mb-5">
   
     <div class="row text-center text-lg-start">
   @foreach ($gallery as $image)

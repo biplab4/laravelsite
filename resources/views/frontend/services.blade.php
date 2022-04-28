@@ -7,8 +7,8 @@
     <div class="container">
         <div>
 
-            <h3 class="font-weight-bolder text-success">WHY CHOOSE US?</h3>
-            <p >
+            <h3 class="font-weight-bolder text-center text-success pb-5">WHY CHOOSE US?</h3>
+            <p class="pb-5">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam dolorem ab, quis
                 exercitationem tempore consectetur eveniet quas necessitatibus corporis? Possimus, at ad. Nulla impedit
                 excepturi dolor, illum dolore voluptates! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
@@ -23,14 +23,15 @@
     </div>
     </div>
     <hr>
-    
+
     <section class="pt-5 pb-5">
         <div class="container">
-            <h2 class="mb-3 font-weight-bold text-primary  text-monospace" style="font-family: cursive;">OUR HIGHLIGHTS
+            <h2 class="mb-4 font-weight-bold text-primary text-center  text-monospace" style="font-family: cursive;">OUR
+                SPECIALS
             </h2>
             <div class="row">
                 <div class="col-6">
-                  
+
                 </div>
                 <div class="col-6 text-right">
                     <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -50,9 +51,13 @@
                                     <div class="col-sm-3 mb-3">
                                         <div class="card">
 
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
+                                            <img class="img-fluid" alt="100%x280" width="100%" height="100px"
+                                                src="../images/a.jpg">
                                             <div class="card-body">
-
+                                                <h4 class="card-title text-success font-weight-bold">Standard Room</h4> </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
                                             </div>
 
                                         </div>
@@ -60,9 +65,13 @@
                                     <div class="col-sm-3 mb-3">
                                         <div class="card">
 
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
+                                            <img class="img-fluid" alt="100%x280" width="100%" height="100px"
+                                                src="../images/b.jpg">
                                             <div class="card-body">
-
+                                                <h4 class="card-title text-success font-weight-bold">Deluxe Room</h4> </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
                                             </div>
 
                                         </div>
@@ -70,9 +79,14 @@
                                     <div class="col-sm-3 mb-3">
                                         <div class="card">
 
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
+                                            <img class="img-fluid" alt="100%x280" width="100%" height="100px"
+                                                src="../images/c.jpg">
                                             <div class="card-body">
-
+                                                <h4 class="card-title text-success font-weight-bold">Super Deluxe Room</h4>
+                                                </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
                                             </div>
                                             </a>
                                         </div>
@@ -80,9 +94,13 @@
                                     <div class="col-sm-3 mb-3">
                                         <div class="card">
 
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
+                                            <img class="img-fluid" alt="100%x280" width="100%" height="100px"
+                                                src="../images/d.jpg">
                                             <div class="card-body">
-
+                                                <h4 class="card-title text-success font-weight-bold">Suite Room</h4> </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
                                             </div>
                                             </a>
                                         </div>
@@ -96,9 +114,13 @@
                                     <div class="col-sm-3 mb-3">
                                         <div class="card">
 
-                                            <img class="img-fluid" alt="100%x280" src="../images/b1.png">
+                                            <img class="img-fluid" alt="100%x280" src="../images/e.jpg">
                                             <div class="card-body">
-
+                                                <h4 class="card-title text-danger font-weight-bold">Multi-Cuisine Restaurant
+                                                </h4> </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
 
                                             </div>
 
@@ -108,9 +130,27 @@
                                     <div class="col-sm-3 mb-3">
                                         <div class="card">
 
-                                            <img class="img-fluid" alt="100%x280" src="../images/b1.png">
+                                            <img class="img-fluid" alt="100%x280" width="100%" height="100px"
+                                                src="../images/fifth.jpg">
                                             <div class="card-body">
+                                                <h4 class="card-title text-danger font-weight-bold">Swimming Pool</h4> </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
+                                            </div>
 
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mb-3">
+                                        <div class="card">
+
+                                            <img class="img-fluid" alt="100%x280" width="100%" height="100px"
+                                                src="../images/i.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title text-danger font-weight-bold">Standard Bar</h4> </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
 
                                             </div>
 
@@ -119,20 +159,14 @@
                                     <div class="col-sm-3 mb-3">
                                         <div class="card">
 
-                                            <img class="img-fluid" alt="100%x280" src="../images/b1.png">
+                                            <img class="img-fluid" alt="100%x280" width="100%" height="100px"
+                                                src="../images/f.jpg">
                                             <div class="card-body">
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 mb-3">
-                                        <div class="card">
-
-                                            <img class="img-fluid" alt="100%x280" src="../images/fourth.jpg">
-                                            <div class="card-body">
-
+                                                <h4 class="card-title text-danger font-weight-bold">Well Equipped Halls</h4>
+                                                </a>
+                                                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
                                             </div>
                                             </a>
                                         </div>
@@ -147,23 +181,24 @@
         </div>
     </section>
     <hr>
-    
- 
+
+
     <div class="container">
-        <h2 class=" font-weight-bolder text-danger text-monospace">OUR SERVICES</h2>
+        <h2 class=" font-weight-bolder text-danger text-center text-monospace">OUR SERVICES</h2>
         <hr>
         <div class="row">
             <div class="col-6">
-                <h3 class="font-weight-bold text-auto text-primary">Multi-Cuisine Restaurant</h3>
-                <span class="text-muted text-justify">
+                <h3 class="font-weight-bold text-auto text-primary pb-5">Multi-Cuisine Restaurant</h3>
+                <span class="text-center">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
+
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
-                    debitis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
+
+                    debitis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id
+                    voluptatibus
+
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
+
                     debitis?
                 </span>
 
@@ -182,23 +217,24 @@
                 <img src="images/hall.jpg" alt="" class="w-100 shadow-lg img-rounded">
             </div>
             <div class="col-6">
-                <h3 class="font-weight-bold text-left text-primary">Well Equipped Halls</h3>
-                <span class="text-muted text-right">
+                <h3 class="font-weight-bold text-left text-success pb-4">Well Equipped Halls</h3>
+                <span class="text-center">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
+
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
-                    debitis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
+
+                    debitis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id
+                    voluptatibus
+
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
+
                     debitis?
                 </span>
-                <br>
-                <br>
+
+
             </div>
         </div>
-        <br>
+
     </div>
 
     <hr>
@@ -206,16 +242,17 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <h3 class="font-weight-bold text-auto text-primary">Roof Top Swimming Pool</h3>
-                <span class="text-muted text-justify">
+                <h3 class="font-weight-bold text-auto text-primary pb-4">Roof Top Swimming Pool</h3>
+                <span class="text-center">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
+
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
-                    debitis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id voluptatibus
-                    <br>
+
+                    debitis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sed quia neque saepe id
+                    voluptatibus
+
                     aliquid iusto consequuntur, doloremque sint dolorem vel esse modi, a iure fuga. Voluptatibus, veniam
-                    <br>
+
                     debitis?
                 </span>
 

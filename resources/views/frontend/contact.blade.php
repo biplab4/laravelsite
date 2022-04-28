@@ -1,16 +1,17 @@
 @extends('layouts.app')
 @section('content')
+<div class="container pt-4 pb-4" style="background-image: url('../images/texture.jpg')">
+    <h2 class="text-center text-warning font-weight-bolder">CONTACT US</h2>
+</div>
+<br>
     <div>
-
         <div>
             @if (session()->has('success'))
                 <p class="alert alert-success text-center">{{ session()->get('success') }}</p>
             @endif
         </div>
 
-        <div class="container" style="background-image: url('../images/texture.jpg')">
-            <h2 class="text-center font-weight-bolder text-uppercase text-monospace text-danger">Contact Us</h2>
-        </div>
+      
         <br><br><br>
         <div class="container">
             <div class="row mb-2 pb-2">

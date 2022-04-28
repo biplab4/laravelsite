@@ -45,10 +45,10 @@
         </a>
         <div class="container">
             <ul class="nav navbar-nav">
-                <li class="active font-weight-bold  "><a href="{{ route('home') }}"> HOME</a></li>
+                <li class="active font-weight-bold  "><a href="{{ route('home') }}"> HOME</a></li>                
+                <li class="font-weight-bold "><a href="{{ route('service') }}">ABOUT US</a></li>
                 <li class="font-weight-bold "><a href="{{ route('room') }}"> OUR ROOMS</a></li>
                 <li class="font-weight-bold "><a href="{{ route('gallery') }}"> GALLERY</a></li>
-                <li class="font-weight-bold "><a href="{{ route('service') }}">ABOUT US</a></li>
                 <li class="font-weight-bold "><a href="{{ route('contact') }}"> CONTACT US</a></li>
                 {{-- <li class="dropdown font-weight-bold">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">

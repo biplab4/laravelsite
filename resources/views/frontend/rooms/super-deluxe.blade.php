@@ -6,28 +6,31 @@
         <hr>
         <div class="row">
             <div class="col">
-
             </div>
             <div class="col text-right">
-
-
             </div>
             <div class="w-100">
             </div>
             <div class="col">
-                <p>
-                    Our super deluxe rooms have enough space to relax and enjoy. The rooms are interlocking with all of the
-                    amenities in place. Adorned in the elegant interiors all these rooms are well-furnished and floors are
-                    done with wooden parquet. The rooms are rigged with a working desk, and a coffee/tea maker. The spacious
+                <h3 class="text-success font-weight-bold pb-3">Description</h3>
+                <p class="pb-3">
+                    Our Super Deluxe rooms have enough space to relax and enjoy. The rooms are interlocking with all of the
+                    amenities in place.  The rooms are rigged with a working desk, and a coffee/tea maker. The spacious
                     rooms deliver tranquility and elegance and make you feel like home. Equipped with modern day amenities,
-                    the room ensures a comfortable stay.
+                    the room ensures a comfortable stay.  The rooms are rigged with a working desk, and a coffee/tea maker. The spacious
+                    rooms deliver tranquility and elegance and make you feel like home. Equipped with modern day amenities,
+                    the room ensures a comfortable stay. Adorned in the elegant interiors all these rooms are well-furnished and floors are
+                    done with wooden parquet. The rooms are rigged with a working desk, and a coffee/tea maker. The spacious
+                    rooms deliver tranquility and elegance and make you feel like home. 
                 </p>
                 {{-- <hr style="margin: 0px">
                 <h4 class="font-weight-bold text-monospace">Cozy and Comfortable Stay</h4>
                 <span class=" font-weight-bolder">Starting at $50 Per Night</span>
                 <hr> --}}
+                
                 <button class="btn btn-success">Book Room</button>
-
+                <button class="btn btn-info align-right">Request Quotation</button>
+<br>
             </div>
             <div class="col">
                 <img src="../images/b1.png" alt="" class="w-100 shadow-xl ">
@@ -37,7 +40,7 @@
             </div>
         </div>
         <hr>
-        <h3 class="text-center font-weight-bolder text-primary">Super Deluxe Facilities</h3>
+        <h3 class=" font-weight-bolder text-primary pt-3 pb-5">Super Deluxe Facilities</h3>
 
         <div class="row">
 
